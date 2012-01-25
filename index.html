@@ -1,0 +1,96 @@
+<!html>
+<html>
+<head>
+	<meta http-equiv="content-type" content="text/html; charset=utf-8" />
+	<script type="text/javascript" src="http://ajax.googleapis.com/ajax/libs/jquery/1.7.1/jquery.min.js"></script>
+	<script type="text/javascript" src="./maker.js"></script>
+	<link rel="stylesheet" href="./style.css" />
+</head>
+<body>
+<h1>ブラウザ三国志 武将メーカー</h1>
+
+<div id="main">
+	<div class="left">
+		<form>
+			<div>
+				<label>レア</label>
+				<select id="rarerity" name="rare">
+					<option value="ur">UR</option>
+					<option value="sr">SR</option>
+					<option value="r">R</option>
+					<option value="uc">UC</option>
+					<option value="c">C</option>
+				</select>
+			</div>
+			<div>
+				<label>名前</label>
+				<input type="text" name="name" value="諸葛亮" id="name" />
+			</div>
+			<div>
+				<label>レベル</label>
+				<input type="text" name="level" value="0" id="level" />
+			</div>
+			<div>
+				<label>コスト</label>
+				<select name="cost" id="cost">
+					<option value="1.0">1.0</option>
+					<option value="1.5">1.5</option>
+					<option value="2.0">2.0</option>
+					<option value="2.5">2.5</option>
+					<option value="3.0">3.0</option>
+					<option value="3.5">3.5</option>
+					<option value="4.0">4.0</option>
+				</select>
+			</div>
+
+			<div>
+				<label>攻撃</label>
+				<input type="text" value="410" id="att"/>
+			</div>
+			<div>
+				<label>知力</label>
+				<input type="text" value="10" id="int"/>
+			</div>
+			<div>
+				<label>歩防</label>
+				<input type="text" value="410" id="wdef"/>
+			</div>
+			<div>
+				<label>槍防</label>
+				<input type="text" value="410" id="sdef"/>
+			</div>
+			<div>
+				<label>弓防</label>
+				<input type="text" value="410" id="bdef"/>
+			</div>
+			<div>
+				<label>騎防</label>
+				<input type="text" value="410" id="rdef"/>
+			</div>
+		</form>
+	</div>
+
+	<div id="preview" class="right">
+		<div id="card" class="card statu_rarerity_r">
+			<div id="status" class="status">
+				<span class="rarerity_r">R</span>
+				<span class="cost">4.0</span>
+				<span class="name">張飛</span>
+				<span class="level_r">0</span>
+				<span class="soltype">槍兵</span>
+				<span class="cardno">1234</span>
+				<span class="status_hp">100/100</span>
+				<span class="status_hp_bar"></span>
+				<span class="status_att">12345</span>
+				<span class="status_int">5.00</span>
+				<span class="status_sdef">235</span>
+				<span class="status_bdef">235</span>
+				<span class="status_wdef">235</span>
+				<span class="status_rdef">235</span>
+				<span class="status_speed">235</span>
+			</div>
+		</div>
+	</div>
+</div>
+</body>
+</html>
