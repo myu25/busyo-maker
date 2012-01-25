@@ -41,6 +41,24 @@
 			jQuery(".status_speed").text(jQuery(this).val());
 		});
 
+		jQuery("#skillName1").change(function() {
+			jQuery(".skillName1").text(jQuery(this).val());
+		});
+		jQuery("#skill1").change(function() {
+			jQuery(".skill1").text(jQuery(this).val());
+		});
+		jQuery("#skillName2").change(function() {
+			jQuery(".skillName2").text(jQuery(this).val());
+		});
+		jQuery("#skill2").change(function() {
+			jQuery(".skill2").text(jQuery(this).val());
+		});
+		jQuery("#skill3").change(function() {
+			jQuery(".skill3").text(jQuery(this).val());
+		});
+		jQuery("#skillName3").change(function() {
+			jQuery(".skillName3").text(jQuery(this).val());
+		});
 
 		jQuery("#rarerity").change();
 		jQuery("#name").change();
@@ -53,5 +71,11 @@
 		jQuery("#wdef").change();
 		jQuery("#rdef").change();
 		jQuery("#speed").change();
+		jQuery("#skillName1").change();
+		jQuery("#skill1").change();
+		jQuery("#skillName2").change();
+		jQuery("#skill2").change();
+		jQuery("#skillName3").change();
+		jQuery("#skill3").change();
 	});
 })();
