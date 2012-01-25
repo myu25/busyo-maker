@@ -1,85 +1,96 @@
-<!DOCTYPE html>
+<!html>
 <html>
 <head>
-  <meta charset='utf-8'>
-
-  <title>myu25/busyo-maker @ GitHub</title>
-
-  <style type="text/css">
-    body {
-      margin-top: 1.0em;
-      background-color: #3b61cc;
-      font-family: Helvetica, Arial, FreeSans, san-serif;
-      color: #ffffff;
-    }
-    #container {
-      margin: 0 auto;
-      width: 700px;
-    }
-    h1 { font-size: 3.8em; color: #c49e33; margin-bottom: 3px; }
-    h1 .small { font-size: 0.4em; }
-    h1 a { text-decoration: none }
-    h2 { font-size: 1.5em; color: #c49e33; }
-    h3 { text-align: center; color: #c49e33; }
-    a { color: #c49e33; }
-    .description { font-size: 1.2em; margin-bottom: 30px; margin-top: 30px; font-style: italic;}
-    .download { float: right; }
-    pre { background: #000; color: #fff; padding: 15px;}
-    hr { border: 0; width: 80%; border-bottom: 1px solid #aaa}
-    .footer { text-align:center; padding-top:30px; font-style: italic; }
-  </style>
+	<meta http-equiv="content-type" content="text/html; charset=utf-8" />
+	<script type="text/javascript" src="http://ajax.googleapis.com/ajax/libs/jquery/1.7.1/jquery.min.js"></script>
+	<script type="text/javascript" src="./maker.js"></script>
+	<link rel="stylesheet" href="./style.css" />
 </head>
-
 <body>
-  <a href="https://github.com/myu25/busyo-maker"><img style="position: absolute; top: 0; right: 0; border: 0;" src="http://s3.amazonaws.com/github/ribbons/forkme_right_darkblue_121621.png" alt="Fork me on GitHub" /></a>
+<h1>ブラウザ三国志 武将メーカー</h1>
 
-  <div id="container">
+<div id="main">
+	<div class="left">
+		<form>
+			<div>
+				<label>レア</label>
+				<select id="rarerity" name="rare">
+					<option value="ur">UR</option>
+					<option value="sr">SR</option>
+					<option value="r">R</option>
+					<option value="uc">UC</option>
+					<option value="c">C</option>
+				</select>
+			</div>
+			<div>
+				<label>名前</label>
+				<input type="text" name="name" value="諸葛亮" id="name" />
+			</div>
+			<div>
+				<label>レベル</label>
+				<input type="text" name="level" value="0" id="level" />
+			</div>
+			<div>
+				<label>コスト</label>
+				<select name="cost" id="cost">
+					<option value="1.0">1.0</option>
+					<option value="1.5">1.5</option>
+					<option value="2.0">2.0</option>
+					<option value="2.5">2.5</option>
+					<option value="3.0">3.0</option>
+					<option value="3.5">3.5</option>
+					<option value="4.0">4.0</option>
+				</select>
+			</div>
 
-    <div class="download">
-      <a href="https://github.com/myu25/busyo-maker/zipball/master">
-        <img border="0" width="90" src="https://github.com/images/modules/download/zip.png"></a>
-      <a href="https://github.com/myu25/busyo-maker/tarball/master">
-        <img border="0" width="90" src="https://github.com/images/modules/download/tar.png"></a>
-    </div>
+			<div>
+				<label>攻撃</label>
+				<input type="text" value="410" id="att"/>
+			</div>
+			<div>
+				<label>知力</label>
+				<input type="text" value="10" id="int"/>
+			</div>
+			<div>
+				<label>歩防</label>
+				<input type="text" value="410" id="wdef"/>
+			</div>
+			<div>
+				<label>槍防</label>
+				<input type="text" value="410" id="sdef"/>
+			</div>
+			<div>
+				<label>弓防</label>
+				<input type="text" value="410" id="bdef"/>
+			</div>
+			<div>
+				<label>騎防</label>
+				<input type="text" value="410" id="rdef"/>
+			</div>
+		</form>
+	</div>
 
-    <h1><a href="https://github.com/myu25/busyo-maker">busyo-maker</a>
-      <span class="small">by <a href="https://github.com/myu25">myu25</a></span></h1>
-
-    <div class="description">
-      ブラウザ三国志　武将メーカー
-    </div>
-
-    
-
-    
-
-    
-
-    
-
-    
-      <h2>Authors</h2>
-      <p>myu      </p>
-    
-
-    
-
-    <h2>Download</h2>
-    <p>
-      You can download this project in either
-      <a href="https://github.com/myu25/busyo-maker/zipball/master">zip</a> or
-      <a href="https://github.com/myu25/busyo-maker/tarball/master">tar formats.
-    </p>
-    <p>You can also clone the project with <a href="http://git-scm.com">Git</a>
-      by running:
-      <pre>$ git clone git://github.com/myu25/busyo-maker</pre>
-    </p>
-
-    <div class="footer">
-      get the source code on GitHub : <a href="https://github.com/myu25/busyo-maker">myu25/busyo-maker</a>
-    </div>
-
-  </div>
-
+	<div id="preview" class="right">
+		<div id="card" class="card statu_rarerity_r">
+			<div id="status" class="status">
+				<span class="rarerity_r">R</span>
+				<span class="cost">4.0</span>
+				<span class="name">張飛</span>
+				<span class="level_r">0</span>
+				<span class="soltype">槍兵</span>
+				<span class="cardno">1234</span>
+				<span class="status_hp">100/100</span>
+				<span class="status_hp_bar"></span>
+				<span class="status_att">12345</span>
+				<span class="status_int">5.00</span>
+				<span class="status_sdef">235</span>
+				<span class="status_bdef">235</span>
+				<span class="status_wdef">235</span>
+				<span class="status_rdef">235</span>
+				<span class="status_speed">235</span>
+			</div>
+		</div>
+	</div>
+</div>
 </body>
 </html>
