@@ -192,7 +192,7 @@ body {
 	color: white;
 }
 
-.level_r {
+.level {
 	display: block;
 	position: absolute;
 	top: 16px;
@@ -206,4 +206,8 @@ body {
 
 div.status {
 	font-family: "Trebuchet MS",Trebuchet,Verdana,Helvetica,Arial,sans-serif;
+}
+
+.soltype, .cardno {
+	display: none;
 }
